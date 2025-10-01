@@ -8,6 +8,7 @@ resources:
 - crds/clusters.openmcp.cloud_clusterprofiles.yaml
 - crds/clusters.openmcp.cloud_clusterrequests.yaml
 - crds/clusters.openmcp.cloud_clusters.yaml
+- crds/crossplane.services.openmcp.cloud_providerconfigs.yaml
 - crds/gardener.clusters.openmcp.cloud_clusterconfigs.yaml
 - crds/gardener.clusters.openmcp.cloud_landscapes.yaml
 - crds/gardener.clusters.openmcp.cloud_providerconfigs.yaml
@@ -15,6 +16,8 @@ resources:
 - crds/openmcp.cloud_platformservices.yaml
 - crds/openmcp.cloud_serviceproviders.yaml
 - cluster-providers/gardener.yaml
+- service-providers/crossplane.yaml
+- extra/crossplane-provider.yaml
 - extra/gardener-cluster-provider-shoot-small.yaml
 - extra/gardener-cluster-provider-shoot-workerless.yaml
 - extra/gardener-landscape.yaml

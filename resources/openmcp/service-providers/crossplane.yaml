@@ -1,0 +1,6 @@
+apiVersion: openmcp.cloud/v1alpha1
+kind: ServiceProvider
+metadata:
+  name: "crossplane"
+spec:
+  image: "ghcr.io/openmcp-project/images/service-provider-crossplane:v0.0.5"
