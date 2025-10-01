@@ -4,3 +4,4 @@ metadata:
   name: "gardener"
 spec:
   image: "ghcr.io/openmcp-project/images/cluster-provider-gardener:v0.8.0"
+  verbosity: debug
