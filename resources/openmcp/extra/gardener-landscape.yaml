@@ -1,0 +1,9 @@
+apiVersion: gardener.clusters.openmcp.cloud/v1alpha1
+kind: Landscape
+metadata:
+  name: gardener-landscape
+spec:
+  access:
+    secretRef:
+      name: gardener-landscape-kubeconfig
+      namespace: openmcp-system

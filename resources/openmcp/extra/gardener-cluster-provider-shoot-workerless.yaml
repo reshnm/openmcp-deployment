@@ -1,0 +1,27 @@
+apiVersion: gardener.clusters.openmcp.cloud/v1alpha1
+kind: ProviderConfig
+metadata:
+  name: shoot-workerless
+spec:
+  landscapeRef:
+    name: gardener-landscape
+  project: hubforplay
+  providerRef:
+    name: gardener
+  shootTemplate:
+    spec:
+      cloudProfile:
+        kind: CloudProfile
+        name: gcp
+      kubernetes:
+        version: "1.32" # e.g. "1.32"
+      maintenance:
+        autoUpdate:
+          kubernetesVersion: true
+        timeWindow:
+          begin: 220000+0200
+          end: 230000+0200
+      provider:
+        type: gcp
+      purpose: evaluation
+      region: europe-west1 # eg europe-west1

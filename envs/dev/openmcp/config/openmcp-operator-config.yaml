@@ -1,0 +1,39 @@
+managedControlPlane:
+  mcpClusterPurpose: mcp-worker
+  reconcileMCPEveryXDays: 7
+scheduler:
+  purposeMappings:
+    mcp-worker:
+      template:
+        metadata:
+          namespace: openmcp-system
+        spec:
+          profile: dev.gardener.shoot-small
+          tenancy: Exclusive
+    onboarding:
+      template:
+        metadata:
+          labels:
+            clusters.openmcp.cloud/delete-without-requests: "false"
+          namespace: openmcp-system
+        spec:
+          profile: dev.gardener.shoot-workerless
+          tenancy: Shared
+    platform:
+      template:
+        metadata:
+          labels:
+            clusters.openmcp.cloud/delete-without-requests: "false"
+          namespace: openmcp-system
+        spec:
+          profile: dev.gardener.shoot-small
+          tenancy: Shared
+    workload:
+      template:
+        metadata:
+          namespace: openmcp-system
+        spec:
+          profile: dev.gardener.shoot-small
+          tenancy: Shared
+      tenancyCount: 20
+  scope: Cluster

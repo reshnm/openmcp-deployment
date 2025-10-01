@@ -1,0 +1,30 @@
+---
+resources:
+  - components.yaml
+  - gitrepo.yaml
+  - flux-kustomization.yaml
+images:
+  - name: ghcr.io/fluxcd/helm-controller
+    newName: ghcr.io/openmcp-project/components/github.com/openmcp-project/openmcp/images/fluxcd/helm-controller
+    newTag: v1.3.0
+    digest: sha256:db55d9d9f9b5106acd8c21da6916b8e285fcfc5572f214361ececd1a8571a4f0
+  - name: ghcr.io/fluxcd/image-automation-controller
+    newName: ghcr.io/openmcp-project/components/github.com/openmcp-project/openmcp/images/fluxcd/image-automation-controller
+    newTag: v0.41.2
+    digest: sha256:e5b90e065e0d91690dbcd83dab3d03207ed030b068e26e9dac88c8d7b4fdfbe4
+  - name: ghcr.io/fluxcd/image-reflector-controller
+    newName: ghcr.io/openmcp-project/components/github.com/openmcp-project/openmcp/images/fluxcd/image-reflector-controller
+    newTag: v1.0.0
+    digest: sha256:c30d2f9e96eca949cb4a2e0109ab9002736bba08674ae8fbe7b44ae0adc2881b
+  - name: ghcr.io/fluxcd/kustomize-controller
+    newName: ghcr.io/openmcp-project/components/github.com/openmcp-project/openmcp/images/fluxcd/kustomize-controller
+    newTag: v1.6.1
+    digest: sha256:1a50730537bafb7827365b9af95c4eb71ca3d9b0bed9bc9bc765880e976972ef
+  - name: ghcr.io/fluxcd/notification-controller
+    newName: ghcr.io/openmcp-project/components/github.com/openmcp-project/openmcp/images/fluxcd/notification-controller
+    newTag: v1.6.0
+    digest: sha256:80174ff676407af7a6feff67b0c2f100de9f7f89df4c26fc871e4d4c4006544d
+  - name: ghcr.io/fluxcd/source-controller
+    newName: ghcr.io/openmcp-project/components/github.com/openmcp-project/openmcp/images/fluxcd/source-controller
+    newTag: v1.6.2
+    digest: sha256:11c8e14df885eff86586533d9941293ec8a1e9fff71bacf119edc79fdf3c63e3
