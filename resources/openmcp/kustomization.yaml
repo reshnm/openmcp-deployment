@@ -18,6 +18,8 @@ resources:
 - cluster-providers/gardener.yaml
 - service-providers/crossplane.yaml
 - extra/crossplane-provider.yaml
+- extra/gardener-cluster-provider-shoot-small-aws.yaml
 - extra/gardener-cluster-provider-shoot-small.yaml
+- extra/gardener-cluster-provider-shoot-workerless-aws.yaml
 - extra/gardener-cluster-provider-shoot-workerless.yaml
 - extra/gardener-landscape.yaml

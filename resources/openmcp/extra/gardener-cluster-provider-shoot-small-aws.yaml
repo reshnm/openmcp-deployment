@@ -1,0 +1,67 @@
+apiVersion: gardener.clusters.openmcp.cloud/v1alpha1
+kind: ProviderConfig
+metadata:
+  name: shoot-small-aws
+spec:
+  landscapeRef:
+    name: gardener-landscape
+  project: hubforplay
+  providerRef:
+    name: gardener
+  shootTemplate:
+    spec:
+      cloudProfile:
+        kind: CloudProfile
+        name: aws
+      kubernetes:
+        version: "1.32" # e.g. "1.32"
+      maintenance:
+        autoUpdate:
+          kubernetesVersion: true
+        timeWindow:
+          begin: 220000+0200
+          end: 230000+0200
+      networking:
+        type: calico
+        nodes: 10.180.0.0/16
+      provider:
+        controlPlaneConfig:
+          apiVersion: aws.provider.extensions.gardener.cloud/v1alpha1
+          kind: ControlPlaneConfig
+          cloudControllerManager:
+            useCustomRouteController: true
+          storage:
+            managedDefaultClass: true
+        infrastructureConfig:
+          apiVersion: aws.provider.extensions.gardener.cloud/v1alpha1
+          kind: InfrastructureConfig
+          networks:
+            vpc:
+              cidr: 10.180.0.0/16
+            zones:
+              - name: eu-west-1a
+                workers: 10.180.0.0/19
+                public: 10.180.32.0/20
+                internal: 10.180.48.0/20
+        type: aws
+        workers:
+        - cri:
+            name: containerd
+          machine:
+            architecture: amd64
+            image:
+              name: gardenlinux
+              version: "1592.9.0" # e.g. "1592.9.0"
+            type: m5.large
+          maxSurge: 1
+          maximum: 5
+          minimum: 1
+          name: default-worker
+          volume:
+            size: 50Gi
+            type: gp3
+          zones:
+          - eu-west-1a # eg europe-west1-c
+      purpose: evaluation
+      region: eu-west-1 # eg europe-west1
+      secretBindingName: aws-ocm
