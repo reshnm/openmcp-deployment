@@ -12,14 +12,17 @@ resources:
 - crds/gardener.clusters.openmcp.cloud_clusterconfigs.yaml
 - crds/gardener.clusters.openmcp.cloud_landscapes.yaml
 - crds/gardener.clusters.openmcp.cloud_providerconfigs.yaml
+- crds/landscaper.services.openmcp.cloud_providerconfigs.yaml
 - crds/openmcp.cloud_clusterproviders.yaml
 - crds/openmcp.cloud_platformservices.yaml
 - crds/openmcp.cloud_serviceproviders.yaml
 - cluster-providers/gardener.yaml
 - service-providers/crossplane.yaml
+- service-providers/landscaper.yaml
 - extra/crossplane-provider.yaml
 - extra/gardener-cluster-provider-shoot-small-aws.yaml
 - extra/gardener-cluster-provider-shoot-small.yaml
 - extra/gardener-cluster-provider-shoot-workerless-aws.yaml
 - extra/gardener-cluster-provider-shoot-workerless.yaml
 - extra/gardener-landscape.yaml
+- extra/landscaper-provider.yaml
