@@ -26,3 +26,4 @@ resources:
 - crds/openmcp.cloud_platformservices.yaml
 - crds/openmcp.cloud_serviceproviders.yaml
 - cluster-providers/kind.yaml
+- extra/service-provider-landscaper.yaml

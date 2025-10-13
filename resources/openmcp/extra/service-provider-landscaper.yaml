@@ -1,0 +1,11 @@
+apiVersion: landscaper.services.openmcp.cloud/v1alpha2
+kind: ProviderConfig
+metadata:
+  name: default
+  labels:
+    landscaper.services.openmcp.cloud/providertype: default
+spec:
+  deployment:
+    repository: ghcr.io/reshnm
+    availableVersions:
+      - v0.142.0
