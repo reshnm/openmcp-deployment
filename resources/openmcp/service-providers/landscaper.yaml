@@ -1,0 +1,8 @@
+apiVersion: openmcp.cloud/v1alpha1
+kind: ServiceProvider
+metadata:
+  name: "landscaper"
+spec:
+  image: "ghcr.io/reshnm/openmcp-project/images/service-provider-landscaper:v0.7.0@sha256:eb3bae2fd466ce5ff23592611dd08cf2a97cb4608b4db5fc144ec45f902ba656"
+  imagePullSecrets:
+    - name: "ghcr"

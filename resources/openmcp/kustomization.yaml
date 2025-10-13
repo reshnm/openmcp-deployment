@@ -22,8 +22,10 @@ resources:
 - crds/clusters.openmcp.cloud_clusterrequests.yaml
 - crds/clusters.openmcp.cloud_clusters.yaml
 - crds/kind.clusters.openmcp.cloud_providerconfigs.yaml
+- crds/landscaper.services.openmcp.cloud_providerconfigs.yaml
 - crds/openmcp.cloud_clusterproviders.yaml
 - crds/openmcp.cloud_platformservices.yaml
 - crds/openmcp.cloud_serviceproviders.yaml
 - cluster-providers/kind.yaml
+- service-providers/landscaper.yaml
 - extra/service-provider-landscaper.yaml
