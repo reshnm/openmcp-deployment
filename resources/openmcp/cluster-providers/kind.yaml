@@ -1,0 +1,16 @@
+apiVersion: openmcp.cloud/v1alpha1
+kind: ClusterProvider
+metadata:
+  name: "kind"
+spec:
+  image: "ghcr.io/reshnm/openmcp-project/images/cluster-provider-kind:v0.0.15@sha256:dfe18b6bfa617223f56d408a013939a8ee7e8e7db3dd0f730387be950875c6ca"
+  imagePullSecrets:
+    - name: "ghcr"
+  extraVolumeMounts:
+  - mountPath: /var/run/docker.sock
+    name: docker
+  extraVolumes:
+  - hostPath:
+      path: /var/run/host-docker.sock
+      type: Socket
+    name: docker

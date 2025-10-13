@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../../resources/openmcp
+images:
+  - name: <openmcp/openmcp-operator>
+    newName: ghcr.io/reshnm/openmcp-project/images/openmcp-operator
+    newTag: v0.14.0
+    digest: sha256:a3399f7ebe3533b29850dd0d8570725beb88ad1589b4f108866aec55c610af5e
+secretGenerator:
+  - name: openmcp-operator-config
+    namespace: openmcp-system
+    files:
+      - config=config/openmcp-operator-config.yaml
