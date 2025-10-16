@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-config
+  namespace: default
+data:
+  gardenerProject: ${.Values.user.gardener.project}
+  gardenerSecretBindingName: ${.Values.user.gardener.secretBindingName}
